@@ -1,0 +1,3 @@
+#!/bin/sh
+cd /Users/niehausbert/Documents/PanDoc/fa1/lineare_Abbildung
+/usr/local/bin/pandoc -f mediawiki -t html5  /Users/niehausbert/Documents/PanDoc/fa1/lineare_Abbildung/Lineare_Abbildung.wiki -o /Users/niehausbert/Documents/PanDoc/fa1/lineare_Abbildung/Lineare_Abbildung_reveal.html  --variable title="Lineare Abbildungen"  --variable author="FA1 Vorlesung 2"  --variable revealpath="../../reveal"  --variable theme=beige  --mathjax  --variable mathjaxpath="../../mathjax" --standalone --section-divs --template=/Users/niehausbert/Documents/PanDoc/tpl/reveal/tpldefault.html

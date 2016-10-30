@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc EN">
+  <title></title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../reveal/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="../../reveal/css/theme/beige.css" id="theme">
+  <!-- Original Settings do not have the following CSS inserted directly -->
+  <link rel="stylesheet" href="../../reveal/css/print/paper.css"/>
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? '../../reveal/css/print/pdf.css' : '../../reveal/css/print/paper.css';
+    //---Uncomment the follow appendChild if you remove the CSS paper.css---
+   //  document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  <!--[if lt IE 9]>
+  <script src="../../reveal/lib/js/html5shiv.js"></script>
+  <![endif]-->
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+  <h1 class="title">Netze und Konvergenz</h1>
+  <h2 class="author">2. Vorlesung</h2>
+</section>
+
+<section id="einführung-netze" class="level2">
+<h2>Einführung Netze</h2>
+<p>Für die Verallgemeinerung der Sätze braucht man ein allgemeineres Konzept der Konvergenz. Im Folgenden sollen zwei solcher Konzepte vorgestellt werden. Das erste ist das Konzept des <strong>Netzes</strong>, das man auch <strong>Moore-Smith Folge</strong> nennt.</p>
+</section>
+<section id="definition-gerichtete-menge" class="level2">
+<h2>Definition: gerichtete Menge</h2>
+<p>Eine Menge <span class="math inline">\(I\)</span> zusammen mit einer Relation <span class="math inline">\(\le\)</span>heißt <strong>gerichtet</strong>, wenn folgende Bedingungen erfüllt sind:</p>
+<ol>
+<li>es gilt <span class="math inline">\(i\le i\)</span> für alle <span class="math inline">\(i\in I\)</span> (Reflexivität)</li>
+<li>wenn <span class="math inline">\(i_1\le i_2\)</span> und <span class="math inline">\(i_2\le i_3\)</span> gilt, dann ist auch <span class="math inline">\(i_1\le i_3\)</span> (Transitivität)</li>
+<li>zu je zwei Elementen <span class="math inline">\(i_1, i_2\in I\)</span> gibt es ein Element <span class="math inline">\(i_3\)</span> mit <span class="math inline">\(i_1\le i_3\)</span> und <span class="math inline">\(i_2\le i_3\)</span>.</li>
+</ol>
+</section>
+<section id="beispiele" class="level2">
+<h2>Beispiele</h2>
+<ul>
+<li>Die Menge <span class="math inline">\(\mathbb N\)</span> der natürlichen Zahlen mit der üblichen Ordnung <span class="math inline">\(\le\)</span> ist gerichtet.</li>
+<li>Die reellen Zahlen <span class="math inline">\(\mathbb R\)</span> mit der üblichen Ordnung <span class="math inline">\(\le\)</span> sind ebenfalls gerichtet.</li>
+</ul>
+</section>
+<section id="definition-netz" class="level2">
+<h2>Definition: Netz</h2>
+<p>Sei <span class="math inline">\(X\)</span> eine beliebige Menge. Ein <strong>Netz</strong> in <span class="math inline">\(X\)</span> ist eine Abbildung <span class="math inline">\(\phi\)</span><span class="math inline">\(:I\to X\)</span> von einer gerichteten Menge <span class="math inline">\(I\)</span> in die Menge <span class="math inline">\(X\)</span>.</p>
+</section>
+<section id="bemerkung-indexmenge" class="level2">
+<h2>Bemerkung: Indexmenge</h2>
+<ul>
+<li>Die Abbildung <span class="math inline">\(\phi\)</span> aus der vorstehenden Definition ist eine Vorschrift, die jedem Element <span class="math inline">\(i\in I\)</span> einen Wert <span class="math inline">\(\phi(i)=x_i\in X\)</span> zuordnet.</li>
+<li>Man kann daher die gerichtete Menge <span class="math inline">\(I\)</span> als Indexmenge auffassen und schreibt für das Netz auch <span class="math inline">\((x_i)_{i\in I}\)</span>.</li>
+</ul>
+</section>
+<section id="schreibweise" class="level2">
+<h2>Schreibweise</h2>
+<p>Aus dieser Schreibweise wird auch ersichtlich, warum wir den gerichteten Mengen den Namen <span class="math inline">\(I\)</span> gegeben haben. Der Begriff Folge aus der Bezeichnung Moore-Smith Folge ist ebenfalls leichter ersichtlich.</p>
+</section>
+<section id="folgen-als-netze" class="level2">
+<h2>Folgen als Netze</h2>
+<p>Nimmt man die natürlichen Zahlen als gerichtete Menge, so ist ein Netz <span class="math inline">\(\phi\)</span><span class="math inline">\(:\mathbb N\to X\)</span>, oder in gewohnter Schreibweise <span class="math inline">\((x_n)_{n\in\mathbb N}\)</span>, nichts anderes als eine Folge in <span class="math inline">\(X\)</span>.</p>
+</section>
+<section id="menge-als-index" class="level2">
+<h2>Menge als Index</h2>
+<ul>
+<li>Sei nun <span class="math inline">\(X\)</span> ein topologischer Raum, <span class="math inline">\(x_o \in X\)</span> und <span class="math inline">\(\mathcal U(x_o)\)</span> die Menge aller Umgebungen von <span class="math inline">\(x_o\)</span>. Sei die Relation <span class="math inline">\(\le\)</span> gegeben durch <span class="math inline">\(U_1\le U_2\)</span>, wenn <span class="math inline">\(U_2\subseteq U_1\)</span> gilt. Dann ist <span class="math inline">\(\mathcal U(x_o)\)</span> eine gerichtete Menge. Wählt man für jede Umgebung <span class="math inline">\(U\)</span> von <span class="math inline">\(x\)</span> einen Punkt <span class="math inline">\(x_u\in U\)</span> aus, so bildet die Familie <span class="math inline">\((x_u)_{U\in\mathcal U(x)}\)</span> ein Netz, das gegen <span class="math inline">\(x\)</span> konvergiert.</li>
+</ul>
+</section>
+<section id="def-konvergentes-netz" class="level2">
+<h2>Def: konvergentes Netz</h2>
+<ul>
+<li>Sei <span class="math inline">\(X\)</span> ein topologischer Raum und <span class="math inline">\((x_i)_{i\in I}\)</span> ein Netz in <span class="math inline">\(X\)</span>.</li>
+<li>Das Netz heißt <strong>konvergent</strong> gegen den Punkt <span class="math inline">\(x_o\in X\)</span>, wenn es für jede Umgebung <span class="math inline">\(U_\varepsilon\)</span> von <span class="math inline">\(x_o\)</span> ein <span class="math inline">\(i_\varepsilon\in I\)</span> gibt, so daß <span class="math inline">\(x_i\in U\)</span> für alle <span class="math inline">\(i\in I\)</span> mit <span class="math inline">\(i_\varepsilon \le i\)</span>.</li>
+</ul>
+</section>
+<section id="seiten-information" class="level2">
+<h2>Seiten-Information</h2>
+<ul>
+<li>Diese Seite ist ein <a href="https://de.wikiversity.org/wiki/PanDocElectron-Presentation">PanDocElectron-SLIDE</a> Dokumententyp</li>
+<li>Quelle: Wikiversity DE <a href="https://de.wikiversity.org/wiki/Lineare_Abbildung" class="uri">https://de.wikiversity.org/wiki/Lineare_Abbildung</a></li>
+<li>Der Foliensatz wurde für den <a href="https://de.wikiversity.org/wiki/Kurs:Funktionalanalysis">Kurs:Funktionalanalysis</a> erstellt</li>
+<li>Nächste Inhalte des Kurses <a href="https://de.wikiversity.org/wiki/Lineare_Abbildung">Lineare Abbildung</a> Matrizen stellen u.a. Lineare Abbildung vom <span class="math inline">\(\mathbb{R}^n\)</span> in den <span class="math inline">\(\mathbb{R}^m\)</span> als <span class="math inline">\(m \times n\)</span>-Matrizen dar</li>
+</ul>
+</section>
+    </div>
+  </div>
+
+  <script src="../../reveal/lib/js/head.min.js"></script>
+  <script src="../../reveal/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+		menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+					controls: true,
+					themes: false,
+					transitions: false,
+					markers: true,
+					hideMissingTitles: true,
+					keyboard: false,
+					custom: [
+				            { title: 'Plugins', icon: '<i class="fa fa-external-link"></i>', src: 'toc.html' },
+				            { title: 'About', icon: '<i class="fa fa-info"></i>', src: 'about.html' }
+				        ]
+				},
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // none/fade/slide/convex/concave/zoom
+
+        math: {
+          // mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
+          mathjax: '../../mathjax/MathJax.js',
+          config: 'TeX-AMS_HTML-full'
+        },
+
+        // Optional reveal.js plugins
+      dependencies: [
+					{ src: '../../reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../../reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../../reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../../reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+//__AUDIORECORDER__//					{ src: '../../reveal/plugin/audio-slideshow/slideshow-recorder.js'},
+//__AUDIOPLAYER__//					{ src: '../../reveal/plugin/audio-slideshow/audio-slideshow.js'},
+					{ src: '../../reveal/plugin/chalkboard/chalkboard.js'},
+					{ src: '../../reveal/plugin/menu/menu.js'},
+				],
+				audio: {
+					prefix: 'chalkboard/',
+					suffix: '.ogg',
+					defaultDuration: 5,
+//					textToSpeechURL: "http://api.voicerss.org/?key=[YOUR_KEY]&hl=en-gb&c=ogg&src=",
+					advance: 500,
+					autoplay: false,
+					defaultText: true,
+					playerOpacity: 0.2,
+				},
+				chalkboard: { // font-awesome.min.css must be available
+					//src: "../../reveal/plugin/chalkboard/chalkboard.json",
+					//src: "chalkboard/chalkboard.json",
+					toggleChalkboardButton: { left: "80px" },
+					toggleNotesButton: { left: "130px" },
+					theme: "whiteboard",
+					background: [ 'rgba(127,127,127,.1)' , '../../reveal/plugin/chalkboard/img/whiteboard.png' ],
+					pen: [ '../../reveal/plugin/chalkboard/img/boardmarker.png' , '../../reveal/plugin/chalkboard/img/boardmarker.png' ],
+//				        color: [ 'rgba(0,0,255,1)', 'rgba(0,0,255,0.5)' ],
+//				        draw: [ (RevealChalkboard) ?  RevealChalkboard.drawWithPen : null , (RevealChalkboard) ? RevealChalkboard.drawWithPen : null ],
+				},
+				keyboard: {
+				    67: function() { RevealChalkboard.toggleNotesCanvas() },	// toggle chalkboard when 'c' is pressed
+				    66: function() { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
+				    46: function() { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
+				     8: function() { RevealChalkboard.reset() },	// reset all chalkboard data when 'BACKSPACE' is pressed
+				    68: function() { RevealChalkboard.download() },	// download chalkboard drawing when 'd' is pressed
+					90: function() { Recorder.downloadZip(); }, 	// press 'z' to download zip containing audio files
+					84: function() { Recorder.fetchTTS(); } 	// press 't' to fetch TTS audio files
+				},
+
+//    dependencies: [
+//          { src: '../../reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+//          { src: '../../reveal/plugin/zoom-js/zoom.js', async: true },
+//          { src: '../../reveal/plugin/notes/notes.js', async: true },
+//          { src: '../../reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+//		  { src: '../../reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+//		  { src: '../../reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+//          { src: '../../reveal/plugin/zoom-js/zoom.js', async: true },
+//          { src: '../../reveal/plugin/notes/notes.js', async: true },
+//          { src: '../../reveal/plugin/math/math.js', async: true }
+//
+//				]
+      });
+    </script>
+    </body>
+</html>
