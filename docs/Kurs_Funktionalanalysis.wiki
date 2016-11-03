@@ -7,7 +7,7 @@ Im Sinne der OER (Open Educational Resources) sollten die Vorlesungsinhalten zur
 
 * '''Kapitel 1:'''
 ** [https://de.wikiversity.org/wiki/Normen,_Metriken,_Topologie Normen, Metriken, Topologie] - ([[FA1/topologie1/Normen_Metriken_Topologie_reveal.html|Folien]])
-** [https://de.wikiversity.org/wiki/Netze_(Mathematik Netze] - ([[FA1/Netze/Netze_reveal.html|Folien]])
+** [https://de.wikiversity.org/wiki/Netze_(Mathematik Netze] - ([[FA1/Netze/Netze_Mathematik_reveal.html|Folien]])
 ** [https://de.wikiversity.org/wiki/Lineare_Abbildung Lineare Abbildung] ([[FA1/Lineare_Abbildung/Lineare_Abbildung_reveal.html|Folien]])
 
 == Nutzung der Materialien für Lehrveranstaltungen ==
