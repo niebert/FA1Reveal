@@ -6,7 +6,7 @@ Im Sinne der OER (Open Educational Resources) sollten die Vorlesungsinhalten zur
 == Inhalte ==
 
 * '''Kapitel 1:'''
-** [https://de.wikiversity.org/wiki/Normen,_Metriken,_Topologie Normen, Metriken, Topologie]
+** [https://de.wikiversity.org/wiki/Normen,_Metriken,_Topologie Normen, Metriken, Topologie] ([https://niebert.github.io/FA1Reveal/topologie1/Normen_Metrik_Topologie_reveal.html Folien RevealJS])
 ** [https://de.wikiversity.org/wiki/Netze_(Mathematik Netze]
 ** [https://de.wikiversity.org/wiki/Lineare_Abbildung Lineare Abbildung]
 
