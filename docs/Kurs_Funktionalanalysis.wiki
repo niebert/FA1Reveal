@@ -6,9 +6,11 @@ Im Sinne der OER (Open Educational Resources) sollten die Vorlesungsinhalten zur
 == Inhalte ==
 
 * '''Kapitel 1:'''
-** [https://de.wikiversity.org/wiki/Normen,_Metriken,_Topologie Normen, Metriken, Topologie] ([https://niebert.github.io/FA1Reveal/topologie1/Normen_Metrik_Topologie_reveal.html Folien RevealJS])
-** [https://de.wikiversity.org/wiki/Netze_(Mathematik Netze]
+** [https://de.wikiversity.org/wiki/Normen,_Metriken,_Topologie Normen, Metriken, Topologie] ('''[topologie1/Normen_Metrik_Topologie_reveal.html Folien RevealJS]''')
+** [https://de.wikiversity.org/wiki/Netze_(Mathematik Netze] 
+('''[Netze/Netze_reveal.html Folien RevealJS]''')
 ** [https://de.wikiversity.org/wiki/Lineare_Abbildung Lineare Abbildung]
+('''[Lineare_Abbildung/Lineare_Abbildung_reveal.html Folien RevealJS]''')
 
 == Nutzung der Materialien für Lehrveranstaltungen ==
 Die Vorlesung wird in einem PanDoc-Folien-Format ([https://de.wikiversity.org/wiki/PanDocElectron-Presentatio PanDocElectron-SLIDE]) bereitgestellt, das mit dem Werkzeug [http://niebert.github.io/PanDocElectron PanDocElectron] online in Präsentationfolien
