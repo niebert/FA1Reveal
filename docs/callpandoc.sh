@@ -1,3 +1,3 @@
 #!/bin/sh
 cd /Volumes/HOMEUSB/DocumentsUSB/presentation/Vorlesungen/FA1Reveal/docs
-/usr/local/bin/pandoc -f mediawiki -t html  --toc -s  "/Volumes/HOMEUSB/DocumentsUSB/presentation/Vorlesungen/FA1Reveal/docs/Kurs_Funktionalanalysis.wiki" -o "/Volumes/HOMEUSB/DocumentsUSB/presentation/Vorlesungen/FA1Reveal/docs/Kurs_Funktionalanalysis_html.html"  --variable title="Lineare Abbildungen"  --variable author="FA1 Vorlesung" -s -S -c pandoc.css
+/usr/local/bin/pandoc -f mediawiki -t html  --toc -s  "/Volumes/HOMEUSB/DocumentsUSB/presentation/Vorlesungen/FA1Reveal/docs/Kurs_Funktionalanalysis.wiki" -o "/Volumes/HOMEUSB/DocumentsUSB/presentation/Vorlesungen/FA1Reveal/docs/Kurs_Funktionalanalysis_html.html"  --variable title="Funktionalanalysis 1"  --variable author="Vorlesung OER" -s -S -c pandoc.css
