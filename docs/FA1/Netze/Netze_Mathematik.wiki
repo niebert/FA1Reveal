@@ -1,0 +1,39 @@
+== Einführung Netze ==
+Für die Verallgemeinerung der Sätze braucht man ein allgemeineres Konzept der Konvergenz. Im Folgenden sollen zwei solcher Konzepte vorgestellt werden. Das erste ist das Konzept des '''Netzes''', das man auch '''Moore-Smith Folge''' nennt.
+
+== Definition: gerichtete Menge ==
+Eine Menge <math>I</math> zusammen mit einer Relation <math>\le</math>heißt '''gerichtet''', wenn folgende Bedingungen erfüllt sind:
+#es gilt <math>i\le i</math> für alle <math>i\in I</math> (Reflexivität)
+#wenn <math>i_1\le i_2</math> und <math>i_2\le i_3</math> gilt, dann ist auch <math>i_1\le i_3</math> (Transitivität)
+#zu je zwei Elementen <math>i_1, i_2\in I</math> gibt es ein Element <math>i_3</math> mit <math>i_1\le i_3</math> und <math>i_2\le i_3</math>.
+
+
+== Beispiele ==
+*Die Menge <math>\mathbb N</math> der natürlichen Zahlen mit der üblichen Ordnung <math>\le</math> ist gerichtet.
+*Die reellen Zahlen <math>\mathbb R</math> mit der üblichen Ordnung <math>\le</math> sind ebenfalls gerichtet.
+
+== Definition: Netz ==
+Sei <math>X</math> eine beliebige Menge. Ein '''Netz''' in <math>X</math> ist eine Abbildung <math>\phi</math><math>:I\to X</math> von einer gerichteten Menge <math>I</math> in die Menge <math>X</math>.
+
+== Bemerkung: Indexmenge ==
+* Die Abbildung <math>\phi</math> aus der vorstehenden Definition ist eine Vorschrift, die jedem Element <math>i\in I</math> einen Wert <math>\phi(i)=x_i\in X</math> zuordnet. 
+* Man kann daher die gerichtete Menge <math>I</math> als Indexmenge auffassen und schreibt für das Netz auch <math>(x_i)_{i\in I}</math>. 
+
+== Schreibweise ==
+Aus dieser Schreibweise wird auch ersichtlich, warum wir den gerichteten Mengen den Namen <math>I</math> gegeben haben. Der Begriff Folge aus der Bezeichnung Moore-Smith Folge ist ebenfalls leichter ersichtlich.
+
+== Folgen als Netze ==
+Nimmt man die natürlichen Zahlen als gerichtete Menge, so ist ein Netz <math>\phi</math><math>:\mathbb N\to X</math>, oder in gewohnter Schreibweise <math>(x_n)_{n\in\mathbb N}</math>, nichts anderes als eine Folge in <math>X</math>.
+
+== Menge als Index ==
+* Sei nun <math>X</math> ein topologischer Raum, <math>x_o \in X</math> und <math>\mathcal U(x_o)</math> die Menge aller Umgebungen von <math>x_o</math>. Sei die Relation <math>\le</math> gegeben durch <math>U_1\le U_2</math>, wenn <math>U_2\subseteq U_1</math> gilt. Dann ist <math>\mathcal U(x_o)</math> eine gerichtete Menge. Wählt man für jede Umgebung <math>U</math> von <math>x</math> einen Punkt <math>x_u\in U</math> aus, so bildet die Familie <math>(x_u)_{U\in\mathcal U(x)}</math> ein Netz, das gegen <math>x</math> konvergiert.
+
+== Def: konvergentes Netz ==
+* Sei <math>X</math> ein topologischer Raum und <math>(x_i)_{i\in I}</math> ein Netz in <math>X</math>. 
+* Das Netz heißt '''konvergent''' gegen den Punkt <math>x_o\in X</math>, wenn es für jede Umgebung <math>U_\varepsilon</math> von <math>x_o</math> ein <math>i_\varepsilon\in I</math> gibt, so daß <math>x_i\in U</math> für alle <math>i\in I</math> mit <math>i_\varepsilon \le i</math>.
+
+== Seiten-Information ==
+* Diese Seite ist ein [https://de.wikiversity.org/wiki/PanDocElectron-Presentation PanDocElectron-SLIDE] Dokumententyp
+* Quelle: Wikiversity DE https://de.wikiversity.org/wiki/Lineare_Abbildung
+* Der Foliensatz wurde für den [https://de.wikiversity.org/wiki/Kurs:Funktionalanalysis Kurs:Funktionalanalysis] erstellt
+* Nächste Inhalte des Kurses [https://de.wikiversity.org/wiki/Lineare_Abbildung Lineare Abbildung] Matrizen stellen u.a. Lineare Abbildung vom <math>\mathbb{R}^n</math> in den <math>\mathbb{R}^m</math> als <math>m \times n</math>-Matrizen dar

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc EN">
+  <title></title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../reveal/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="../../reveal/css/theme/beige.css" id="theme">
+  <!-- Original Settings do not have the following CSS inserted directly -->
+  <link rel="stylesheet" href="../../reveal/css/print/paper.css"/>
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? '../../reveal/css/print/pdf.css' : '../../reveal/css/print/paper.css';
+    //---Uncomment the follow appendChild if you remove the CSS paper.css---
+   //  document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  <!--[if lt IE 9]>
+  <script src="../../reveal/lib/js/html5shiv.js"></script>
+  <![endif]-->
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+  <h1 class="title">Lineare Abbildungen</h1>
+  <h2 class="author">FA1 Vorlesung 2</h2>
+</section>
+
+<section id="definition-lineare-abbildung" class="level2">
+<h2>Definition: Lineare Abbildung</h2>
+<p>Seien <span class="math inline">\(V\)</span> und <span class="math inline">\(W\)</span> Vektorräume über einem gemeinsamen <a href="https://de.wikipedia.org/wiki/Körper_(Algebra)">Grundkörper</a> <span class="math inline">\(\mathbb K\)</span>. Eine Abbildung <span class="math inline">\(f\colon V \to W\)</span> heißt lineare Abbildung, wenn für alle <span class="math inline">\(x,y \in V\)</span> und <span class="math inline">\(\lambda \in \mathbb K\)</span> die folgenden Bedingungen gelten:</p>
+<ul>
+<li><span class="math inline">\(f\)</span> ist homogen:
+<dl>
+
+<dd><span class="math inline">\(f\left(\lambda x\right) = \lambda f\left(x\right)\)</span>
+</dd>
+</dl></li>
+<li><span class="math inline">\(f\)</span> ist additiv:
+<dl>
+
+<dd><span class="math inline">\(f\left(x+y\right)=f\left(x\right)+f\left(y\right)\)</span>
+</dd>
+</dl></li>
+</ul>
+</section>
+<section id="alternative-definition-lin.-abb." class="level2">
+<h2>Alternative Definition Lin. Abb.</h2>
+<p>Die zwei obigen Bedingungen kann man auch zusammenfassen:</p>
+<p><span class="math display">\[f\left(\lambda x + y\right) = \lambda f\left(x\right) + f\left(y\right)\]</span></p>
+<ul>
+<li>Für <span class="math inline">\(y = 0_V\)</span> liefert diese die Bedingung für die Homogenität und</li>
+<li>für <span class="math inline">\(\lambda  = 1 \in \mathbb K\)</span> in Eigenschaft für die Additivität.</li>
+</ul>
+<p>Eine weitere, gleichwertige Bedingung ist die Forderung, dass der <a href="https://de.wikipedia.org/wiki/Funktionsgraph">Graph</a> der Abbildung <span class="math inline">\(f\)</span> ein <a href="https://de.wikipedia.org/wiki/Untervektorraum">Untervektorraum</a> der Summe der Vektorräume <span class="math inline">\(V\)</span> und <span class="math inline">\(W\)</span> ist.</p>
+</section>
+<section id="beispiele-1" class="level2">
+<h2>Beispiele 1</h2>
+<ul>
+<li>Für <span class="math inline">\(V = W = \mathbb R\)</span> hat jede lineare Abbildung die Gestalt <span class="math inline">\(f(x) = m x\)</span> mit <span class="math inline">\(m \in \mathbb R\)</span>.</li>
+<li>In der Schule werden lineare Funktionen behandelt. Dort bezeichnet man in der Regel Funktionen <span class="math inline">\(f\colon\mathbb{R}\rightarrow\mathbb{R}\)</span> der Form <span class="math inline">\(f(x)= mx + b\)</span> mit <span class="math inline">\(m, b \in \mathbb{R}\)</span> als linear. Tatsächlich sind solche affinelineare Abbildungen nur für <span class="math inline">\(b=0\)</span> tatsächlich lineare Abbildungen:</li>
+</ul>
+<p><code>Für </code><span class="math inline">\(m = 1\)</span><code> und </code><span class="math inline">\(b = 3\)</span><code>: </code><span class="math inline">\(f(2x)= 2x + 3 \neq 2x + 6 = 2f(x)\)</span><code>.</code></p>
+</section>
+<section id="beispiele-2" class="level2">
+<h2>Beispiele 2</h2>
+<ul>
+<li>Es sei <span class="math inline">\(V = \mathbb R^n\)</span> und <span class="math inline">\(W = \mathbb R^m\)</span>. Dann wird für jede <span class="math inline">\(m \times n\)</span>-Matrix <span class="math inline">\(A\)</span> mit Hilfe der <a href="https://de.wikipedia.org/wiki/Matrizenmultiplikation">Matrizenmultiplikation</a> eine lineare Abbildung</li>
+</ul>
+<p><span class="math inline">\(f \colon \mathbb R^n \to \mathbb R^m\)</span> durch</p>
+<p><span class="math inline">\(f(x) = A \, x =
+   \begin{pmatrix}
+   a_{11} &amp; \dots &amp; a_{1n} \\
+   \vdots &amp;       &amp; \vdots \\
+   a_{m1} &amp; \dots &amp; a_{mn}
+   \end{pmatrix}
+   \begin{pmatrix} x_1 \\ \vdots \\ x_n \end{pmatrix}\)</span><br />
+definiert. Jede lineare Abbildung von <span class="math inline">\(\mathbb R^n\)</span> nach <span class="math inline">\(\mathbb R^m\)</span> kann so dargestellt werden.</p>
+</section>
+<section id="beispiele-3" class="level2">
+<h2>Beispiele 3</h2>
+<ul>
+<li>Ist <span class="math inline">\(I \subset \mathbb R\)</span> ein offenes Intervall, <span class="math inline">\(V = C^1(I,\mathbb R)\)</span> der <span class="math inline">\(\mathbb R\)</span>-Vektorraum der stetig differenzierbaren Funktionen auf <span class="math inline">\(I\)</span> und</li>
+<li><span class="math inline">\(W = C^0(I,\mathbb R)\)</span> der <span class="math inline">\(\mathbb R\)</span>-Vektorraum der stetigen Funktionen auf <span class="math inline">\(I\)</span>, so ist die Abbildung</li>
+</ul>
+<p><span class="math inline">\(D \colon C^1(I,\mathbb R) \to C^0(I,\mathbb R)\)</span><code>, </code><span class="math inline">\(f \mapsto f&#39;\)</span><code>,</code></p>
+<p>die jeder Funktion <span class="math inline">\(f \in C^1(I,\mathbb R)\)</span> ihre Ableitung zuordnet, linear. Entsprechendes gilt für andere <a href="https://de.wikipedia.org/wiki/Linearer_Differentialoperator">lineare Differentialoperatoren</a>.</p>
+</section>
+<section id="bild" class="level2">
+<h2>Bild</h2>
+<p>Zwei bei der Betrachtung linearer Abbildungen wichtige Mengen sind das <a href="https://de.wikipedia.org/wiki/Bild_(Mathematik)">Bild</a> und der <a href="https://de.wikipedia.org/wiki/Kern_(Algebra)">Kern</a> einer linearen Abbildung <span class="math inline">\(f\colon  V \to W\)</span>.</p>
+<ul>
+<li>Das Bild <span class="math inline">\(\mathrm {im} (f)\)</span> der Abbildung ist die Menge der Bildvektoren unter <span class="math inline">\(f\)</span>, also die Menge aller <span class="math inline">\(f(v)\)</span> mit <span class="math inline">\(v\)</span> aus <span class="math inline">\(V\)</span>. Die Bildmenge wird daher auch durch <span class="math inline">\(f(V)\)</span> notiert.</li>
+<li>Das Bild ist ein <a href="https://de.wikipedia.org/wiki/Untervektorraum">Untervektorraum</a> von <span class="math inline">\(W\)</span>.</li>
+</ul>
+</section>
+<section id="kern" class="level2">
+<h2>Kern</h2>
+<ul>
+<li>Der Kern <span class="math inline">\(\mathrm{Ker}(f)\)</span> der Abbildung ist die Menge der Vektoren aus <span class="math inline">\(V\)</span>, die durch <span class="math inline">\(f\)</span> auf den <a href="https://de.wikipedia.org/wiki/Nullvektor">Nullvektor</a> von <span class="math inline">\(W\)</span> abgebildet werden.</li>
+<li>Der Kern ist ein Untervektorraum von <span class="math inline">\(V\)</span>. Die Abbildung <span class="math inline">\(f\)</span> ist genau dann <a href="https://de.wikipedia.org/wiki/Injektivität">injektiv</a>, wenn der Kern nur den Nullvektor enthält.</li>
+</ul>
+</section>
+<section id="seiten-information" class="level2">
+<h2>Seiten-Information</h2>
+<ul>
+<li>Diese Seite ist ein <a href="https://de.wikiversity.org/wiki/PanDocElectron-Presentation">PanDocElectron-SLIDE</a> Dokumententyp</li>
+<li>Quelle: Wikiversity DE <a href="https://de.wikiversity.org/wiki/Lineare_Abbildung" class="uri">https://de.wikiversity.org/wiki/Lineare_Abbildung</a></li>
+<li>Der Foliensatz wurde für den <a href="https://de.wikiversity.org/wiki/Kurs:Funktionalanalysis">Kurs:Funktionalanalysis</a> erstellt</li>
+<li>Nächste Inhalte des Kurses <a href="https://de.wikiversity.org/wiki/Diagonalisierbarkeit">Diagonalisierbarkeit</a> und <a href="https://de.wikiversity.org/wiki/Trigonalisierbarkeit">Trigonalisierbarkeit</a> Matrizen als Beispiel für Operatoren auf dem <span class="math inline">\(\mathbb{R}^n\)</span></li>
+</ul>
+</section>
+    </div>
+  </div>
+
+  <script src="../../reveal/lib/js/head.min.js"></script>
+  <script src="../../reveal/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+		menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+					controls: true,
+					themes: false,
+					transitions: false,
+					markers: true,
+					hideMissingTitles: true,
+					keyboard: false,
+					custom: [
+				            { title: 'Plugins', icon: '<i class="fa fa-external-link"></i>', src: 'toc.html' },
+				            { title: 'About', icon: '<i class="fa fa-info"></i>', src: 'about.html' }
+				        ]
+				},
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // none/fade/slide/convex/concave/zoom
+
+        math: {
+          // mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
+          mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
+          config: 'TeX-AMS_HTML-full'
+        },
+
+        // Optional reveal.js plugins
+      dependencies: [
+					{ src: '../../reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../../reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../../reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../../reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+//__AUDIORECORDER__//					{ src: '../../reveal/plugin/audio-slideshow/slideshow-recorder.js'},
+//__AUDIOPLAYER__//					{ src: '../../reveal/plugin/audio-slideshow/audio-slideshow.js'},
+					{ src: '../../reveal/plugin/chalkboard/chalkboard.js'},
+					{ src: '../../reveal/plugin/menu/menu.js'},
+				],
+				audio: {
+					prefix: 'chalkboard/',
+					suffix: '.ogg',
+					defaultDuration: 5,
+//					textToSpeechURL: "http://api.voicerss.org/?key=[YOUR_KEY]&hl=en-gb&c=ogg&src=",
+					advance: 500,
+					autoplay: false,
+					defaultText: true,
+					playerOpacity: 0.2,
+				},
+				chalkboard: { // font-awesome.min.css must be available
+					//src: "../../reveal/plugin/chalkboard/chalkboard.json",
+					//src: "chalkboard/chalkboard.json",
+					toggleChalkboardButton: { left: "80px" },
+					toggleNotesButton: { left: "130px" },
+					theme: "whiteboard",
+					background: [ 'rgba(127,127,127,.1)' , '../../reveal/plugin/chalkboard/img/whiteboard.png' ],
+					pen: [ '../../reveal/plugin/chalkboard/img/boardmarker.png' , '../../reveal/plugin/chalkboard/img/boardmarker.png' ],
+//				        color: [ 'rgba(0,0,255,1)', 'rgba(0,0,255,0.5)' ],
+//				        draw: [ (RevealChalkboard) ?  RevealChalkboard.drawWithPen : null , (RevealChalkboard) ? RevealChalkboard.drawWithPen : null ],
+				},
+				keyboard: {
+				    67: function() { RevealChalkboard.toggleNotesCanvas() },	// toggle chalkboard when 'c' is pressed
+				    66: function() { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
+				    46: function() { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
+				     8: function() { RevealChalkboard.reset() },	// reset all chalkboard data when 'BACKSPACE' is pressed
+				    68: function() { RevealChalkboard.download() },	// download chalkboard drawing when 'd' is pressed
+					90: function() { Recorder.downloadZip(); }, 	// press 'z' to download zip containing audio files
+					84: function() { Recorder.fetchTTS(); } 	// press 't' to fetch TTS audio files
+				},
+
+//    dependencies: [
+//          { src: '../../reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+//          { src: '../../reveal/plugin/zoom-js/zoom.js', async: true },
+//          { src: '../../reveal/plugin/notes/notes.js', async: true },
+//          { src: '../../reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+//		  { src: '../../reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+//		  { src: '../../reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+//          { src: '../../reveal/plugin/zoom-js/zoom.js', async: true },
+//          { src: '../../reveal/plugin/notes/notes.js', async: true },
+//          { src: '../../reveal/plugin/math/math.js', async: true }
+//
+//				]
+      });
+    </script>
+    </body>
+</html>
