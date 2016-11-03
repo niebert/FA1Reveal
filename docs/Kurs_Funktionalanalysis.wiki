@@ -1,0 +1,14 @@
+
+
+== Ursprung der Materialen ==
+Im Sinne der OER (Open Educational Resources) sollten die Vorlesungsinhalten zur freien Verfügungen gestellt werden. Gleichzeitig werden die aus dem anpassbaren Wikiinhalten erstellten Folien in einem GitHib-Repository bereitgestellt, um die Download und Nutzung von weiter zu Vereinfachen. Die Artikel sind in der Regel mit so wenig Text versehen, damit die Erzeugung der Folien direkt aus den Inhalten möglich ist. Alle Folienseiten in Wikiversity haben daher am Ende der Seiten einen Hinweis ''[https://de.wikiversity.org/wiki/PanDocElectron-Presentatio PanDocElectron-SLIDE]''. Wenn Sie diese Seiten editieren, achten Sie bitte darauf, dass die Folien nicht zu voll werden. Ausführlichere Texte zu den Slides werden in der Regel in eigenen Artikeln erstellt. Falls sich die Erläuterungsseiten explizit auf eine Folien beziehen, erhält die Erläuterungsseite eine Markierung ''[https://de.wikiversity.org/wiki/PanDocElectron-Presentatio PanDocElectron-TEXT]'' und SLIDE- bzw. TEXT-Version verweisen wechselseitig aufeinander.
+
+== Inhalte ==
+
+* '''Kapitel 1:'''
+** [https://de.wikiversity.org/wiki/Normen,_Metriken,_Topologie Normen, Metriken, Topologie]
+** [https://de.wikiversity.org/wiki/Netze_(Mathematik Netze]
+** [https://de.wikiversity.org/wiki/Lineare_Abbildung Lineare Abbildung]
+
+== Nutzung der Materialien für Lehrveranstaltungen ==
+Die Vorlesung wird in einem PanDoc-Folien-Format ([https://de.wikiversity.org/wiki/PanDocElectron-Presentatio PanDocElectron-SLIDE]) bereitgestellt, das mit dem Werkzeug [http://niebert.github.io/PanDocElectron PanDocElectron] online in Präsentationfolien
