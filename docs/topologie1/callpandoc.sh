@@ -1,3 +1,0 @@
-#!/bin/sh
-cd /Users/niehausbert/Documents/PanDoc/fa1/topologie1
-/usr/local/bin/pandoc -f mediawiki -t html5  /Users/niehausbert/Documents/PanDoc/fa1/topologie1/Normen,_Metriken,_Topologie.wiki -o /Users/niehausbert/Documents/PanDoc/fa1/topologie1/Normen,_Metriken,_Topologie_reveal.html  --variable title="Normen, Metrik, Topologie"  --variable author="FA1: Vorlesung 1"  --variable revealpath="../../reveal"  --variable theme=beige  --mathjax  --variable mathjaxpath="../../mathjax" --standalone --section-divs --template=/Users/niehausbert/Documents/PanDoc/tpl/reveal/tpldefault.html
